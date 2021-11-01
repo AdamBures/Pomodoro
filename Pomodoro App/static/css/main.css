@@ -1,0 +1,78 @@
+body{
+    /* background-image: linear-gradient(180deg, #B95959 36.63%, rgba(255, 255, 255, 0) 93.76%); */
+    background-color: #B95959;    
+}
+
+
+#title{
+    margin-top: -100px;
+    color: whitesmoke;
+    font-family: Advent Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 96px;
+    line-height: 115px;
+    text-align: center;
+
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+
+#rectangle{
+    font-family: Advent Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+
+    color: #FF8484;
+    width: 331px;
+    height: 69px;
+    border: none;
+    background: #FFFFFF;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#rectangle:active {
+    background-color: white;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+#timer {
+    font-family: Advent Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 120px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+#text {
+    position: absolute;
+    background-color: white;
+    font-family: Advent Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 57px;
+    text-align: center;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    top: 80%;
+    color: #000000;
+    
+}

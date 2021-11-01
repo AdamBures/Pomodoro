@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+    <span id="result"></span>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+    <script type="text/javascript">
+        const root_url = {{ request.root_url| tojson | safe}};
+        const intervalID = setInterval(update_values, 1000);
+        function update_values() {
+            $.getJSON(
+                root_url + "_timer",
+                data => {
+                    $("#timer").text(data.result);
+                    if (data.result == 0) {
+                        clearInterval(intervalID);
+                        $("#timer").text("60");
+                    }
+                }
+            )
+        }
+    </script>
+
+    <script>
+        function myFunction() {
+            update_values();
+        }
+
+    </script>
+
+    <p id="demo"></p>
+    <div id="title">
+        <p>Pomodoro</p>
+    </div>
+    <div id="timer">
+        <p id="result">0:25:00</p>
+    </div>
+    <div class="center">
+        <a href="five_minutes.html"><button id=rectangle>5 Minutes Break</button></a>
+    </div>
+    <div id="text">
+        <br>
+        <p id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in sem odio. Pellentesque
+            mollis,
+            nulla non
+        </p>
+    </div>
+</body>
+
+</html>
